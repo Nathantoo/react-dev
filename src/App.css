@@ -1,0 +1,169 @@
+:root {
+    --mainBlue: #2a2a72;
+    --lightBlue: #009fdd;
+    --mainWhite: #f3f3f3;
+    --mainDark: #232528;
+    --mainYellow: #ffa400;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--mainWhite);
+}
+.text-title {
+    font-family: 'Marker', sans-serif;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+.text-blue {
+    color: var(--mainBlue)
+}
+.text-bright {
+    color: var(--lightBlue);
+}
+.btn-cart {
+    text-transform: capitalize;
+    background-color: transparent;
+    border: 1px solid var(--lightBlue);
+    border-radius: 3px;
+    padding: 5px 8px;
+    color: var(--lightBlue);
+    outline: none;
+    transition: all .5s ease-in-out;
+}
+.btn-cart:hover {
+    background-color: var(--lightBlue);
+    color: var(--mainBlue);
+}
+.navbar {
+    background: var(--mainBlue) !important;
+}
+.nav-link {
+    color: var(--mainWhite) !important;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.card {
+    border-color: transparent;
+    transition: all 1s linear;
+}
+.card:hover {
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px  0 rgba(0,0,0,0.2);
+}
+.card:hover .card-footer {
+    background: rgba(247,247,247);
+}
+.card-footer {
+    background: transparent;
+    border-top: transparent;
+    transition: all 1s linear;
+
+}
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+.card-img-top {
+    transition: all 1s linear;
+}
+.img-container:hover .card-img-top {
+    transform: scale(1.2);
+}
+.card-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    color: var(--mainWhite);
+    padding: .2rem .4rem;
+    background: var(--lightBlue);
+    border-radius: .5rem 0 0 0;
+    font-size: 1.4rem;
+    transform: translate(100%, 100%);
+    transition: all .5s linear;
+    outline: none;
+}
+.card-btn:focus{
+    outline: none;
+}
+.card-btn:hover {
+    color: var(--mainBlue);
+    cursor: pointer;
+}
+.img-container:hover .card-btn {
+    transform: translate(0, 0)
+}
+.details-btn {
+    text-transform: capitalize;
+    border-radius: 3px;
+    background: none;
+    outline: none;
+    border: 1px solid var(--lightBlue);
+    padding: 5px 8px;
+    color: var(--lightBlue);
+    transition: all .5s linear;
+
+}
+.add-btn {
+    text-transform: capitalize;
+    border-radius: 3px;
+    background: none;
+    outline: none;
+    border: 1px solid var(--mainYellow);
+    padding: 5px 8px;
+    color: var(--mainYellow);
+    margin-right: 2rem;
+    transition: all .5s linear;
+}
+.add-btn:focus {
+    outline: none;
+}
+.add-btn:hover {
+    color: var(--mainBlue);
+    background: var(--mainYellow);
+}
+.details-btn:hover {
+    color: var(--mainBlue);
+    background: var(--lightBlue);
+}
+.modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#modal {
+    background : var(--mainWhite);
+}
+.btn-black {
+    border-radius: 0 !important;
+    border: 1.2px solid var(--mainDark);
+    color: var(--mainDark);
+    font-size: .5rem !important;
+    text-transform: uppercase;
+    background: transparent;
+    transition: all .5s ease;
+}
+.btn-count {
+    border-radius: 0 !important;
+    border: 1.2px solid var(--mainDark);
+    color: var(--mainDark);
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    background: transparent;
+    font-family: 'Marker';
+}
+.btn-black:hover {
+    color: var(--mainWhite);
+    background: var(--mainDark);
+}
+.cart-icon {
+    color: var(--mainYellow);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
