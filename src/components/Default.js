@@ -1,26 +1,27 @@
-import React, { Component } from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default class Default extends Component {
-    render() {
-        console.log(this.props)
-        return (
-           <div className='container'> 
-               <div className='row'>
-                   <div className='col-10 mx-auto text-center pt-5 text-uppercase text-title'>
-                       <h1 className='display-3'>404</h1>
-                       <h1>Error</h1>
-                       <h2>page not found</h2>
-                       <h3>
-                           the requested URL  
-                             <span className='text-danger mx-2'>
-                             {this.props.location.pathname}
-                            </span> 
-                           was not found
-                       </h3>
-                   </div>
-
-               </div>
-           </div>
-        )
-    }
+export default function Default({ location }) {
+  return (
+    <div className="container mt-5 default">
+      <div className="row">
+        <div className="col-10 mx-auto text-capitalize pt-5 text-title text-center">
+          <h1 className="display-3">404</h1>
+          <h1 className="text-muted">error</h1>
+          <h2>page not found</h2>
+          <p className="sans lead">
+            The requested URL{" "}
+            <span className="text-danger mr-1">{location.pathname}</span>
+            was not found
+          </p>
+          <Link to="/">
+            <button className="back-btn sans text-capitalize">
+              <i className="fas fa-arrow-left mr-2 move"></i>
+              back to products
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
